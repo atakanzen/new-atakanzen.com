@@ -1,8 +1,10 @@
-import { getAllPosts } from "@/lib/mdx";
-import { Post, Sitemap } from "@/types/general";
+import { POSTS_COLLECTION } from "@/lib/constants";
+import { Sitemap } from "@/types/general";
 import { MetadataRoute } from "next";
+import { OstDocument } from "outstatic";
+import { getDocuments } from "outstatic/server";
 
-function generateSiteMap(posts: Post[]): Sitemap {
+function generateSiteMap(posts: OstDocument[]): Sitemap {
   return [
     {
       url: "https://atakanzen.com",
@@ -15,15 +17,15 @@ function generateSiteMap(posts: Post[]): Sitemap {
       priority: 0.8,
     },
     ...posts.map((p) => ({
-      url: `https://atakanzen.com/writing/${p.path}`,
+      url: `https://atakanzen.com/writing/${p.slug}`,
       priority: 0.7,
-      lastModified: new Date(p.metadata.date),
+      lastModified: new Date(p.publishedAt),
     })),
   ];
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = await getAllPosts();
+  const posts = getDocuments(POSTS_COLLECTION, ["publishedAt", "slug"]);
 
   return generateSiteMap(posts);
 }
