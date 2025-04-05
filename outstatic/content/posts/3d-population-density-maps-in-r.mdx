@@ -30,7 +30,7 @@ To read the data, you’ll need to download the corresponding `gpkg` file from [
 
 As additional information, Kontur prepares its population data using H3 hexagons with population counts at a 400m resolution. As they explain in more detail [in this blog post](https://www.kontur.io/blog/why-we-use-h3/), the key reason for using hexagons is that they have equal distances between the center of a hexagon and the centers of neighboring cells. This property greatly simplifies analysis and smoothing over gradients.
 
-&lt;aside&gt; 💡 You can find even more information about the Kontur Population Dataset itself [in this article](https://www.kontur.io/portfolio/population-dataset/). &lt;/aside&gt;
+> You can find even more information about the Kontur Population Dataset itself [in this article](https://www.kontur.io/portfolio/population-dataset/).
 
 ## Plotting the data
 
@@ -58,7 +58,7 @@ As you can see, the latitude and longitude are also handled and displayed on the
 
 To bring some realism to our plot, we’ll be using the [rayrender](https://www.rayrender.net/) and [rayshader](https://www.rayshader.com/) packages.
 
-**Rayrender** provides an API in R that allows us to use a raytracer built in C++ to render scenes. It supports various materials, including diffuse, metallic, dielectric (glass), light-emitting, as well as procedural and user-specified image textures and HDR environment lighting. 
+**Rayrender** provides an API in R that allows us to use a raytracer built in C++ to render scenes. It supports various materials, including diffuse, metallic, dielectric (glass), light-emitting, as well as procedural and user-specified image textures and HDR environment lighting.
 
 **Rayshader** is an open-source package that enables the creation of 2D and 3D data visualizations. It utilizes elevation data and a combination of raytracing to generate stunning maps, which can be rotated and examined interactively. You can even achieve high-quality renders by using specific functions from rayshader that internally leverage rayrender.
 
@@ -100,7 +100,7 @@ In my opinion, shadows and light are the most important elements in aesthetics. 
 
 First, we need colors that will complement our work with light and shadow. For this, we’ll use the `MetBrewer` package, which provides color palettes inspired by works from the [Metropolitan Museum of Art in New York City](https://www.metmuseum.org/). For this plot, I’ve chosen the “Greek” palette.
 
- ![](/images/GreekPalette.png)
+![](/images/GreekPalette.png)
 
 This palette offers linear colors, making it easy to create gradients, with meaningful tonal shifts that correspond well to population density. Darker tones can represent areas of higher population density, while lighter tones can signify less dense regions. Let’s see how we can bring this palette into RStudio.
 
@@ -168,7 +168,7 @@ The star of the show here is the `render_highquality` function from the `rayshad
 - `lightintensity`: The strength of the light sources.
 - `samples`: The maximum number of samples per pixel. The more samples you have, the higher the quality of your render.
 
-&lt;aside&gt; 💡  An additional argument, `sample_method`, is important if you need more than 256 samples. While not included in the code snippet below, it’s worth mentioning that you must set this to `"sobol"` if you exceed 256 samples. You can read more about it [here](https://www.rayshader.com/reference/render_highquality.html#arguments-1).&lt;/aside&gt;
+> An additional argument, `sample_method`, is important if you need more than 256 samples. While not included in the code snippet below, it’s worth mentioning that you must set this to `"sobol"` if you exceed 256 samples. You can read more about it [here](https://www.rayshader.com/reference/render_highquality.html#arguments-1).
 
 Now, let’s see how this all comes together in code.
 
@@ -265,7 +265,7 @@ Of course, feel free to customize the colors, fonts, and annotations to suit you
 
 And finally, after all the hard work we've put in, we have this beauty in our hands:
 
- ![](/images/titled_final_plot.png)
+![](/images/titled_final_plot.png)
 
 I hope you enjoyed the content and appreciated the render as much as I do. There's something truly captivating about bringing data to life through 3D CGI, and it's a passion of mine that I love to share. Creating something visually striking while diving deep into the data is always rewarding. Thank you for following along on this journey, and I hope this guide inspires you to explore the world of 3D visualization and create your own stunning pieces. Have a great one, and happy coding!
 

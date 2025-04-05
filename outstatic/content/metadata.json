@@ -1,23 +1,7 @@
 {
-  "commit": "5d4f12d297b0f48c6217ff03e2d7f1a7d8a794dc",
-  "generated": "2025-04-05T18:02:12.139Z",
+  "commit": "a009b4abe69c9ea987b85d1af2dfac50120f41b1",
+  "generated": "2025-04-05T19:40:55.685Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "",
-        "hash": "3330438616",
-        "path": "outstatic/content/posts/3d-population-density-maps-in-r.mdx"
-      },
-      "author": {
-        "name": "Atakan",
-        "picture": "https://avatars.githubusercontent.com/u/59116264?v=4"
-      },
-      "collection": "posts",
-      "publishedAt": "2024-08-25T22:00:00.000Z",
-      "slug": "3d-population-density-maps-in-r",
-      "status": "published",
-      "title": "3D Population Density Maps in R: Visualizing Data with Raytracing"
-    },
     {
       "__outstatic": {
         "commit": "5d85d33e4f5ddc88ad27f9bd187c3db931121e20",
@@ -65,6 +49,22 @@
       "slug": "natural-languages-and-programming-languges",
       "status": "published",
       "title": "Natural Languages and Programming Languges"
+    },
+    {
+      "__outstatic": {
+        "commit": "a009b4abe69c9ea987b85d1af2dfac50120f41b1",
+        "hash": "2128047256",
+        "path": "outstatic/content/posts/3d-population-density-maps-in-r.mdx"
+      },
+      "author": {
+        "name": "Atakan",
+        "picture": "https://avatars.githubusercontent.com/u/59116264?v=4"
+      },
+      "collection": "posts",
+      "publishedAt": "2024-08-25T22:00:00.000Z",
+      "slug": "3d-population-density-maps-in-r",
+      "status": "published",
+      "title": "3D Population Density Maps in R: Visualizing Data with Raytracing"
     }
   ]
 }
