@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { getDocumentBySlug, getDocumentSlugs } from "outstatic/server";
 
 import Image, { ImageProps } from "next/image";
+import rehypeCallouts from "rehype-callouts";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 
@@ -55,7 +56,10 @@ const PostPage: NextAppPage<{ slug: string }> = async ({ params }) => {
       components={components}
       options={{
         mdxOptions: {
-          rehypePlugins: [rehypeHighlight],
+          rehypePlugins: [
+            [rehypeHighlight],
+            [rehypeCallouts, { theme: "github" }],
+          ],
           remarkPlugins: [remarkGfm],
         },
       }}

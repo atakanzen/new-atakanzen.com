@@ -29,17 +29,52 @@ export const metadata: Metadata = {
 };
 
 const Posts = async () => {
-  const posts = getDocuments(POSTS_COLLECTION, ["title", "slug"]);
+  const posts = getDocuments(POSTS_COLLECTION, [
+    "title",
+    "slug",
+    "description",
+    "coverImage",
+    "publishedAt",
+  ]);
+
   return (
-    <div className="w-full">
-      <div className="flex flex-col items-start gap-y-2 w-full">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold mb-8 text-center text-[var(--foreground-rgb)]">
+        Writing
+      </h1>
+      <div className="grid grid-cols-1 gap-6">
         {posts.map((p, i) => (
           <Link
             key={i}
-            href={`writing/${p.slug}`}
-            className="flex w-full items-center justify-between hover:pl-4 focus:pl-4 transition-all duration-150"
+            href={`/writing/${p.slug}`}
+            className="group block bg-white dark:bg-[var(--background-rgb)] rounded-lg shadow hover:shadow-lg transition-shadow duration-200 overflow-hidden"
           >
-            <span className="underline text-base md:text-2xl">{p.title}</span>
+            {p.coverImage && (
+              <div
+                className="h-48 w-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${p.coverImage})` }}
+              ></div>
+            )}
+            <div className="p-4">
+              <h2 className="text-2xl font-semibold mb-2 group-hover:underline text-[var(--foreground-rgb)]">
+                {p.title}
+              </h2>
+              {p.description && (
+                <p className="text-gray-600 dark:text-gray-300 mb-3">
+                  {p.description}
+                </p>
+              )}
+              <div className="text-sm text-gray-500">
+                <span>
+                  {new Date(p.publishedAt).toLocaleDateString("en-US", {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
+              </div>
+            </div>
           </Link>
         ))}
       </div>
