@@ -1,6 +1,6 @@
 {
-  "commit": "",
-  "generated": "2025-04-05T17:01:32.208Z",
+  "commit": "5d85d33e4f5ddc88ad27f9bd187c3db931121e20",
+  "generated": "2025-04-05T17:59:04.869Z",
   "metadata": [
     {
       "__outstatic": {
@@ -17,6 +17,22 @@
       "slug": "3d-population-density-maps-in-r",
       "status": "published",
       "title": "3D Population Density Maps in R: Visualizing Data with Raytracing"
+    },
+    {
+      "__outstatic": {
+        "commit": "5d85d33e4f5ddc88ad27f9bd187c3db931121e20",
+        "hash": "2557020660",
+        "path": "outstatic/content/posts/about-low-code-platforms.mdx"
+      },
+      "author": {
+        "name": "Atakan",
+        "picture": "https://avatars.githubusercontent.com/u/59116264?v=4"
+      },
+      "collection": "posts",
+      "publishedAt": "2023-05-29T22:00:00.000Z",
+      "slug": "about-low-code-platforms",
+      "status": "published",
+      "title": "About Low-Code Platforms: Why It Isn't Always The Best Option"
     }
   ]
 }
