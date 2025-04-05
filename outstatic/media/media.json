@@ -1,0 +1,50 @@
+{
+  "commit": "",
+  "generated": "Sat, 05 Apr 2025 16:52:01 GMT",
+  "media": [
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "0",
+        "path": "public/images/GreekPalette.png"
+      },
+      "alt": "",
+      "filename": "GreekPalette.png",
+      "publishedAt": "2025-04-05T16:52:00.894Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "0",
+        "path": "public/images/Rplot.png"
+      },
+      "alt": "",
+      "filename": "Rplot.png",
+      "publishedAt": "2025-04-05T16:52:00.894Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "0",
+        "path": "public/images/final_plot.png"
+      },
+      "alt": "",
+      "filename": "final_plot.png",
+      "publishedAt": "2025-04-05T16:52:00.894Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "0",
+        "path": "public/images/titled_final_plot.png"
+      },
+      "alt": "",
+      "filename": "titled_final_plot.png",
+      "publishedAt": "2025-04-05T16:52:00.894Z",
+      "type": "image"
+    }
+  ]
+}
