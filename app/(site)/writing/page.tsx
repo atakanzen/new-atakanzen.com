@@ -1,7 +1,8 @@
-import { getAllPosts } from "@/lib/mdx";
 import { Metadata } from "next";
 import Link from "next/link";
+import { getDocuments } from "outstatic/server";
 
+import { POSTS_COLLECTION } from "@/lib/constants";
 import { getOpenGraphImage } from "@/lib/opengraph";
 
 export const metadata: Metadata = {
@@ -28,20 +29,17 @@ export const metadata: Metadata = {
 };
 
 const Posts = async () => {
-  const posts = await getAllPosts();
-
+  const posts = getDocuments(POSTS_COLLECTION, ["title", "slug"]);
   return (
     <div className="w-full">
       <div className="flex flex-col items-start gap-y-2 w-full">
         {posts.map((p, i) => (
           <Link
             key={i}
-            href={`writing/${p.path}`}
+            href={`writing/${p.slug}`}
             className="flex w-full items-center justify-between hover:pl-4 focus:pl-4 transition-all duration-150"
           >
-            <span className="underline text-base md:text-2xl">
-              {p.metadata.title}
-            </span>
+            <span className="underline text-base md:text-2xl">{p.title}</span>
           </Link>
         ))}
       </div>

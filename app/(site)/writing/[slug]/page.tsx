@@ -1,15 +1,21 @@
-import { getPostSlug, postFilePaths } from "@/lib/mdx";
+import { POSTS_COLLECTION } from "@/lib/constants";
 import { NextAppPage } from "@/types/next";
 import "highlight.js/styles/github-dark.css";
+import { getDocumentBySlug, getDocumentSlugs } from "outstatic/server";
 
 const PostPage: NextAppPage<{ slug: string }> = async ({ params }) => {
   const { slug } = await params;
-  const { default: Post } = await import(`@/content/${slug}.mdx`);
-  return <Post />;
+  const Post = getDocumentBySlug(POSTS_COLLECTION, slug);
+  if (!Post) {
+    console.error("No post found with ", slug);
+  }
+
+  return Post?.content;
 };
 
 export async function generateStaticParams() {
-  return postFilePaths.map((fp) => getPostSlug(fp)).map((slug) => ({ slug }));
+  const posts = getDocumentSlugs(POSTS_COLLECTION);
+  return posts.map((slug) => ({ slug }));
 }
 
 export const dynamicParams = false;
