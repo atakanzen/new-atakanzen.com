@@ -36,7 +36,7 @@ export default function Home() {
           target="_blank"
           href="https://github.com/atakanzen"
         >
-          github
+          GitHub
         </a>
         <a
           className="underline"
@@ -44,7 +44,7 @@ export default function Home() {
           target="_blank"
           href="https://linkedin.com/in/atakanzen"
         >
-          linkedin
+          LinkedIn
         </a>
         <a
           className="underline"
@@ -52,15 +52,7 @@ export default function Home() {
           target="_blank"
           href="https://behance.com/atakanzengin"
         >
-          behance
-        </a>
-        <a
-          className="underline"
-          rel="noreferrer"
-          target="_blank"
-          href="https://gdsc.community.dev/collegium-da-vinci-poznan-poland/"
-        >
-          google-dsc
+          Behance
         </a>
       </div>
     </div>

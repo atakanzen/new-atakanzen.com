@@ -4,6 +4,7 @@ import "highlight.js/styles/github-dark.css";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getDocumentBySlug, getDocumentSlugs } from "outstatic/server";
 
+import { ibmPlexMono } from "@/fonts";
 import Image, { ImageProps } from "next/image";
 import rehypeCallouts from "rehype-callouts";
 import rehypeHighlight from "rehype-highlight";
@@ -40,6 +41,8 @@ const components = {
       {...(props as ImageProps)}
     />
   ),
+  pre: (props: any) => <pre {...props} className={ibmPlexMono.className} />,
+  code: (props: any) => <code {...props} className={ibmPlexMono.className} />,
 };
 
 const PostPage: NextAppPage<{ slug: string }> = async ({ params }) => {
