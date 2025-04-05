@@ -39,6 +39,7 @@ const components = {
       height={0}
       sizes="100vw"
       loading="eager"
+      priority
       {...(props as ImageProps)}
     />
   ),
