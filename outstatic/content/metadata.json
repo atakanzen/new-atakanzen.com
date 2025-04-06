@@ -1,6 +1,6 @@
 {
-  "commit": "f9568399274487c910dfae81f47ad81d1af5e545",
-  "generated": "2025-04-06T12:47:28.054Z",
+  "commit": "32ba15e2ac89133b0f543dee238fd45590209a9d",
+  "generated": "2025-04-06T12:47:32.361Z",
   "metadata": [
     {
       "__outstatic": {
@@ -53,8 +53,8 @@
     },
     {
       "__outstatic": {
-        "commit": "f9568399274487c910dfae81f47ad81d1af5e545",
-        "hash": "908416953",
+        "commit": "32ba15e2ac89133b0f543dee238fd45590209a9d",
+        "hash": "3017121030",
         "path": "outstatic/content/posts/about-low-code-platforms.mdx"
       },
       "author": {
