@@ -35,7 +35,7 @@ const GlitchText = () => {
         for (let j = 0; j < junk.length; j++) {
           setTimeout(() => {
             setGlitchText((prevText) => {
-              let chars = prevText.split("");
+              const chars = prevText.split("");
               chars[i] = junk[j];
               return chars.join("");
             });
@@ -44,7 +44,7 @@ const GlitchText = () => {
 
         setTimeout(() => {
           setGlitchText((prevText) => {
-            let chars = prevText.split("");
+            const chars = prevText.split("");
             chars[i] = title[i];
             return chars.join("");
           });
@@ -63,11 +63,12 @@ const GlitchText = () => {
       await runGlitchAnimation(0.5); // faster: half the delay values
       await runGlitchAnimation(0.5);
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // On hover run the normal animation once.
   const handleHoverOnGlitch = () => {
-    runGlitchAnimation(1);
+    runGlitchAnimation(2);
   };
 
   return (

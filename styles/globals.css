@@ -21,6 +21,11 @@
   }
 }
 
+.callout {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
 @layer base {
   *,
   ::after,

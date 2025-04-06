@@ -17,8 +17,8 @@ export async function GET(request: NextRequest) {
         height: 600,
       }
     );
-  } catch (error: any) {
-    console.log(error.message);
+  } catch (error) {
+    console.log(error);
     return new Response("Failed to generate Opengraph Image", { status: 500 });
   }
 }

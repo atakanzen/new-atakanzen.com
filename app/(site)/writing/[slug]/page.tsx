@@ -1,17 +1,17 @@
 import { POSTS_COLLECTION } from "@/lib/constants";
 import { NextAppPage } from "@/types/next";
-import "highlight.js/styles/github-dark.css";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getDocumentBySlug, getDocumentSlugs } from "outstatic/server";
 
 import { ibmPlexMono } from "@/fonts";
+import { Code } from "bright";
 import Image, { ImageProps } from "next/image";
+import { DetailedHTMLProps, HTMLAttributes, ImgHTMLAttributes } from "react";
 import rehypeCallouts from "rehype-callouts";
-import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 
 const components = {
-  a: (props: any) => (
+  a: (props: HTMLAttributes<HTMLAnchorElement>) => (
     <>
       <a {...props} target="_blank" rel="noreferrer" />
       <span className="inline-flex -z-50">
@@ -32,19 +32,33 @@ const components = {
       </span>
     </>
   ),
-  img: (props: any) => (
+  img: (
+    props: DetailedHTMLProps<
+      ImgHTMLAttributes<HTMLImageElement>,
+      HTMLImageElement
+    >
+  ) => (
     <Image
-      className="w-full h-auto"
+      {...(props as ImageProps)}
+      className="w-full h-auto rounded-lg"
       width={0}
       height={0}
       sizes="100vw"
-      loading="eager"
       priority
-      {...(props as ImageProps)}
+      alt={""}
     />
   ),
-  pre: (props: any) => <pre {...props} className={ibmPlexMono.className} />,
-  code: (props: any) => <code {...props} className={ibmPlexMono.className} />,
+  pre: (props: HTMLAttributes<HTMLPreElement>) => (
+    <Code
+      {...props}
+      theme={"dracula"}
+      lineNumbers
+      className={ibmPlexMono.className}
+    />
+  ),
+  code: (props: HTMLAttributes<HTMLElement>) => (
+    <code {...props} className={ibmPlexMono.className} />
+  ),
 };
 
 const PostPage: NextAppPage<{ slug: string }> = async ({ params }) => {
@@ -61,10 +75,7 @@ const PostPage: NextAppPage<{ slug: string }> = async ({ params }) => {
       components={components}
       options={{
         mdxOptions: {
-          rehypePlugins: [
-            [rehypeHighlight],
-            [rehypeCallouts, { theme: "github" }],
-          ],
+          rehypePlugins: [[rehypeCallouts, { theme: "github" }]],
           remarkPlugins: [remarkGfm],
         },
       }}
