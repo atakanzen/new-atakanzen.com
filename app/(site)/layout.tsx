@@ -2,10 +2,17 @@ import Navigation from "@/components/Navigation";
 import { nudica } from "@/fonts";
 
 import "@/styles/globals.css";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "rgb(248, 250, 252)" },
+    { media: "(prefers-color-scheme: dark)", color: "rgb(7, 7, 32)" },
+  ],
 };
 
 export default function RootLayout({

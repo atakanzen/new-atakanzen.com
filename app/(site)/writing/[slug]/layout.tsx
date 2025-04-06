@@ -21,7 +21,7 @@ export default async function MdxLayout({
   });
 
   return (
-    <div className="flex flex-col justify-center pt-8 gap-2 xs:max-w-xs sm:max-w-xl md:max-w-2xl xl:max-w-full xl:items-center mx-auto">
+    <div className="flex flex-col justify-center py-8 gap-2 xs:max-w-xs sm:max-w-xl md:max-w-2xl xl:max-w-full xl:items-center mx-auto">
       <span className="text-gray-500 text-base md:text-xl font-bold">
         {publishedAt}
       </span>
