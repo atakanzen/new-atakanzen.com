@@ -1,6 +1,13 @@
 {
-  "title": "Posts",
-  "slug": "posts",
+  "title": "posts",
   "type": "object",
-  "properties": {}
+  "properties": {
+    "excerpt": {
+      "description": "Excerpt",
+      "required": true,
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "Excerpt"
+    }
+  }
 }
