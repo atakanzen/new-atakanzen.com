@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   description:
     "This is my blog which you can find my posts and notes about the things I'm working with or find interesting.",
   alternates: {
-    canonical: "https://atakanzen.com/writing",
+    canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/writing`,
   },
   twitter: {
     creator: "@atakanzen_",
     card: "summary_large_image",
   },
   openGraph: {
-    url: "https://atakanzen.com/writing",
+    url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/writing`,
     title: "Atakan Zengin's Blog",
     siteName: "Blog - Atakan Zengin",
     description:

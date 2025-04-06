@@ -1,10 +1,12 @@
 import { POSTS_COLLECTION } from "@/lib/constants";
 import { NextAppPage } from "@/types/next";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { getDocumentBySlug, getDocumentSlugs } from "outstatic/server";
+import { getDocumentBySlug, getDocumentSlugs, load } from "outstatic/server";
 
 import { ibmPlexMono } from "@/fonts";
+import { Post } from "@/types/cms";
 import { Code } from "bright";
+import { Metadata } from "next";
 import Image, { ImageProps } from "next/image";
 import { DetailedHTMLProps, HTMLAttributes, ImgHTMLAttributes } from "react";
 import rehypeCallouts from "rehype-callouts";
@@ -60,6 +62,43 @@ const components = {
     <code {...props} className={ibmPlexMono.className} />
   ),
 };
+
+type GenerateMetadataProps = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export async function generateMetadata({
+  params,
+}: GenerateMetadataProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const db = await load();
+
+  const post = await db
+    .find<Post>({ collection: POSTS_COLLECTION, slug }, [
+      "title",
+      "excerpt",
+      "slug",
+      "author",
+    ])
+    .first();
+
+  if (!post) {
+    return {};
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/writing/${post.slug}`,
+    },
+    authors: {
+      name: post.author?.name,
+    },
+  };
+}
 
 const PostPage: NextAppPage<{ slug: string }> = async ({ params }) => {
   const { slug } = await params;

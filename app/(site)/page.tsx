@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://atakanzen.com",
+    url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}`,
     title: "Atakan Zengin",
     description:
       "Hey I'm Atakan! I'm a full-stack software engineer. You can find more information about me here, and read about my thoughts on certain things I'm working on.",
     images: getOpenGraphImage("Atakan Zengin - Software Engineer"),
   },
   alternates: {
-    canonical: "https://atakanzen.com",
+    canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}`,
   },
   keywords:
     "Atakan Zengin, Software Engineer, Zengin, Atakan, Personal Blog, Technology Blog",
