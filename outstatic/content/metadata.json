@@ -1,23 +1,7 @@
 {
-  "commit": "4f82148e56f5cf5cf3c32b1ed0b37029166b7aaf",
-  "generated": "2025-04-06T12:47:49.825Z",
+  "commit": "039a55536548423def7a5a01fcd9b27c5dcb11c3",
+  "generated": "2025-04-06T12:48:36.031Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "56c45afa520950db2051149aadd0fed6848e6804",
-        "hash": "1597487577",
-        "path": "outstatic/content/posts/almost-one-year-at-modanisa.mdx"
-      },
-      "author": {
-        "name": "Atakan",
-        "picture": "https://avatars.githubusercontent.com/u/59116264?v=4"
-      },
-      "collection": "posts",
-      "publishedAt": "2021-09-29T22:00:00.000Z",
-      "slug": "almost-one-year-at-modanisa",
-      "status": "published",
-      "title": "Almost One Year at Modanisa"
-    },
     {
       "__outstatic": {
         "commit": "d7dc8a5fa923b972ecca516754779b21561216f5",
@@ -68,6 +52,23 @@
       "slug": "natural-languages-and-programming-languges",
       "status": "published",
       "title": "Natural Languages and Programming Languges"
+    },
+    {
+      "__outstatic": {
+        "commit": "039a55536548423def7a5a01fcd9b27c5dcb11c3",
+        "hash": "4119721310",
+        "path": "outstatic/content/posts/almost-one-year-at-modanisa.mdx"
+      },
+      "author": {
+        "name": "Atakan",
+        "picture": "https://avatars.githubusercontent.com/u/59116264?v=4"
+      },
+      "collection": "posts",
+      "excerpt": "My adventure at Modanisa that took almost a year, and taught me well.",
+      "publishedAt": "2021-09-29T22:00:00.000Z",
+      "slug": "almost-one-year-at-modanisa",
+      "status": "published",
+      "title": "Almost One Year at Modanisa"
     }
   ]
 }
