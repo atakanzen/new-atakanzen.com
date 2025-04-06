@@ -1,6 +1,6 @@
 {
-  "commit": "0f4429030ba9f7aebf2cdc1ba77a994df0a2b42c",
-  "generated": "2025-04-06T10:24:30.454Z",
+  "commit": "e2d287bd9167398804b8f04b007437eea68b9862",
+  "generated": "2025-04-06T10:26:05.866Z",
   "metadata": [
     {
       "__outstatic": {
@@ -52,8 +52,8 @@
     },
     {
       "__outstatic": {
-        "commit": "0f4429030ba9f7aebf2cdc1ba77a994df0a2b42c",
-        "hash": "3779187836",
+        "commit": "e2d287bd9167398804b8f04b007437eea68b9862",
+        "hash": "1377195620",
         "path": "outstatic/content/posts/3d-population-density-maps-in-r.mdx"
       },
       "author": {
