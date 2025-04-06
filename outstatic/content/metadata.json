@@ -1,6 +1,6 @@
 {
-  "commit": "d7dc8a5fa923b972ecca516754779b21561216f5",
-  "generated": "2025-04-06T12:46:52.655Z",
+  "commit": "f9568399274487c910dfae81f47ad81d1af5e545",
+  "generated": "2025-04-06T12:47:28.054Z",
   "metadata": [
     {
       "__outstatic": {
@@ -17,22 +17,6 @@
       "slug": "almost-one-year-at-modanisa",
       "status": "published",
       "title": "Almost One Year at Modanisa"
-    },
-    {
-      "__outstatic": {
-        "commit": "9b275727720e924572d2bfecdef9c79507dfcab8",
-        "hash": "3439496464",
-        "path": "outstatic/content/posts/about-low-code-platforms.mdx"
-      },
-      "author": {
-        "name": "Atakan",
-        "picture": "https://avatars.githubusercontent.com/u/59116264?v=4"
-      },
-      "collection": "posts",
-      "publishedAt": "2023-05-29T22:00:00.000Z",
-      "slug": "about-low-code-platforms",
-      "status": "published",
-      "title": "About Low-Code Platforms: Why It Isn't Always The Best Option"
     },
     {
       "__outstatic": {
@@ -66,6 +50,23 @@
       "slug": "3d-population-density-maps-in-r",
       "status": "published",
       "title": "3D Population Density Maps in R: Visualizing Data with Raytracing"
+    },
+    {
+      "__outstatic": {
+        "commit": "f9568399274487c910dfae81f47ad81d1af5e545",
+        "hash": "908416953",
+        "path": "outstatic/content/posts/about-low-code-platforms.mdx"
+      },
+      "author": {
+        "name": "Atakan",
+        "picture": "https://avatars.githubusercontent.com/u/59116264?v=4"
+      },
+      "collection": "posts",
+      "excerpt": "My personal thoughts about low-code platforms.",
+      "publishedAt": "2023-05-29T22:00:00.000Z",
+      "slug": "about-low-code-platforms",
+      "status": "published",
+      "title": "About Low-Code Platforms: Why It Isn't Always The Best Option"
     }
   ]
 }
