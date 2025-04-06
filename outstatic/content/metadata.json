@@ -1,6 +1,6 @@
 {
-  "commit": "",
-  "generated": "Sat, 05 Apr 2025 20:07:55 GMT",
+  "commit": "0f4429030ba9f7aebf2cdc1ba77a994df0a2b42c",
+  "generated": "2025-04-06T10:24:30.454Z",
   "metadata": [
     {
       "__outstatic": {
@@ -52,8 +52,8 @@
     },
     {
       "__outstatic": {
-        "commit": "2007d7ac1ea14e3eb2d4419c20b10e0f81945575",
-        "hash": "2128047256",
+        "commit": "0f4429030ba9f7aebf2cdc1ba77a994df0a2b42c",
+        "hash": "3779187836",
         "path": "outstatic/content/posts/3d-population-density-maps-in-r.mdx"
       },
       "author": {
@@ -61,6 +61,7 @@
         "picture": "https://avatars.githubusercontent.com/u/59116264?v=4"
       },
       "collection": "posts",
+      "excerpt": "How to use RStudio to create aesthetic 3D renders for population density maps.",
       "publishedAt": "2024-08-25T22:00:00.000Z",
       "slug": "3d-population-density-maps-in-r",
       "status": "published",

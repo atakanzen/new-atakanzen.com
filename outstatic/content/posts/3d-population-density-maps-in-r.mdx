@@ -6,6 +6,7 @@ author:
   name: "Atakan"
   picture: "https://avatars.githubusercontent.com/u/59116264?v=4"
 slug: "3d-population-density-maps-in-r"
+excerpt: "How to use RStudio to create aesthetic 3D renders for population density maps."
 ---
 
 ![](/images/final_plot.png)
@@ -30,8 +31,7 @@ To read the data, you’ll need to download the corresponding `gpkg` file from [
 
 As additional information, Kontur prepares its population data using H3 hexagons with population counts at a 400m resolution. As they explain in more detail [in this blog post](https://www.kontur.io/blog/why-we-use-h3/), the key reason for using hexagons is that they have equal distances between the center of a hexagon and the centers of neighboring cells. This property greatly simplifies analysis and smoothing over gradients.
 
-> [!tip]
-> You can find even more information about the Kontur Population Dataset itself [in this article](https://www.kontur.io/portfolio/population-dataset/).
+> \[!tip\] You can find even more information about the Kontur Population Dataset itself [in this article](https://www.kontur.io/portfolio/population-dataset/).
 
 ## Plotting the data
 
@@ -169,8 +169,7 @@ The star of the show here is the `render_highquality` function from the `rayshad
 - `lightintensity`: The strength of the light sources.
 - `samples`: The maximum number of samples per pixel. The more samples you have, the higher the quality of your render.
 
-> [!warning]
-> An additional argument, `sample_method`, is important if you need more than 256 samples. While not included in the code snippet below, it’s worth mentioning that you must set this to `"sobol"` if you exceed 256 samples. You can read more about it [here](https://www.rayshader.com/reference/render_highquality.html#arguments-1).
+> \[!warning\] An additional argument, `sample_method`, is important if you need more than 256 samples. While not included in the code snippet below, it’s worth mentioning that you must set this to `"sobol"` if you exceed 256 samples. You can read more about it [here](https://www.rayshader.com/reference/render_highquality.html#arguments-1).
 
 Now, let’s see how this all comes together in code.
 
@@ -271,5 +270,4 @@ And finally, after all the hard work we've put in, we have this beauty in our ha
 
 I hope you enjoyed the content and appreciated the render as much as I do. There's something truly captivating about bringing data to life through 3D CGI, and it's a passion of mine that I love to share. Creating something visually striking while diving deep into the data is always rewarding. Thank you for following along on this journey, and I hope this guide inspires you to explore the world of 3D visualization and create your own stunning pieces. Have a great one, and happy coding!
 
-> [!tip]
-> The full code is available in [this repository](https://github.com/atakanzen/population-visualization).
+> \[!tip\] The full code is available in [this repository](https://github.com/atakanzen/population-visualization).
