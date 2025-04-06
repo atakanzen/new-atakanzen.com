@@ -1,6 +1,6 @@
 {
-  "commit": "32ba15e2ac89133b0f543dee238fd45590209a9d",
-  "generated": "2025-04-06T12:47:32.361Z",
+  "commit": "4f82148e56f5cf5cf3c32b1ed0b37029166b7aaf",
+  "generated": "2025-04-06T12:47:49.825Z",
   "metadata": [
     {
       "__outstatic": {
@@ -17,22 +17,6 @@
       "slug": "almost-one-year-at-modanisa",
       "status": "published",
       "title": "Almost One Year at Modanisa"
-    },
-    {
-      "__outstatic": {
-        "commit": "a27d2a43297114802eec5956f853ea882c238235",
-        "hash": "854471027",
-        "path": "outstatic/content/posts/natural-languages-and-programming-languges.mdx"
-      },
-      "author": {
-        "name": "Atakan",
-        "picture": "https://avatars.githubusercontent.com/u/59116264?v=4"
-      },
-      "collection": "posts",
-      "publishedAt": "2022-04-02T22:00:00.000Z",
-      "slug": "natural-languages-and-programming-languges",
-      "status": "published",
-      "title": "Natural Languages and Programming Languges"
     },
     {
       "__outstatic": {
@@ -67,6 +51,23 @@
       "slug": "about-low-code-platforms",
       "status": "published",
       "title": "About Low-Code Platforms: Why It Isn't Always The Best Option"
+    },
+    {
+      "__outstatic": {
+        "commit": "4f82148e56f5cf5cf3c32b1ed0b37029166b7aaf",
+        "hash": "334371887",
+        "path": "outstatic/content/posts/natural-languages-and-programming-languges.mdx"
+      },
+      "author": {
+        "name": "Atakan",
+        "picture": "https://avatars.githubusercontent.com/u/59116264?v=4"
+      },
+      "collection": "posts",
+      "excerpt": "A few thoughts on how essentially similar these two separate contexts are.",
+      "publishedAt": "2022-04-02T22:00:00.000Z",
+      "slug": "natural-languages-and-programming-languges",
+      "status": "published",
+      "title": "Natural Languages and Programming Languges"
     }
   ]
 }
